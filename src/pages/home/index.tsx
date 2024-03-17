@@ -10,30 +10,23 @@ import PythonSDKDoc from "./PythonSDKDoc";
 import UnstructuredData from "./UnstructuredData";
 import Integrations from "./Integrations";
 import EndHomePage from "./EndHomePage";
+import Partner from './Partner';
+import PrivacyAndSecurity from "./PrivacyAndSecurity";
 
 const Home = () => {
   return (
     <Layout>
       <div className="flex flex-col justify-center items-center gap-20 mb-10">
         <BookMeeting />
-        {/* <Partner /> */}
-
-        <div className="mt-40 flex items-center justify-center relative">
-          <img src={intro} alt="intro" />
-          <div className="absolute w-[820px] flex justify-center items-center left-[25%]">
-            <h2 className="text-grey-1000 text-[48px] leading-[52px] font-medium text-center">
-              Build ambitious workflows with data, models, and humans. Deploy
-              solutions in hours, not weeks.
-            </h2>
-          </div>
-        </div>
-        <Marketplace />
+        <Partner />
         <DataLoop />
         <SeeForYourself />
+        <Marketplace />
         <GenerativeAI />
         <PythonSDKDoc />
         <UnstructuredData />
         <Integrations />
+        <PrivacyAndSecurity />
         <EndHomePage />
       </div>
     </Layout>

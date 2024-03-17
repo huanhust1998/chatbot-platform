@@ -14,3 +14,4 @@ export { default as pythonSDKDoc } from "./python-sdk-docs.png";
 export { default as backgroundIntegration } from "./background-integrations.webp";
 export { default as integration } from "./integrations.webp";
 export { default as heroImgTable } from "./hero-img-tablet.webp";
+export { default as awards } from "./awards.png";
