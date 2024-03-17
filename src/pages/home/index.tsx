@@ -3,6 +3,7 @@ import Layout from "../../layout";
 import BookMeeting from "./BookMeeting";
 import { intro } from "../../assets/images";
 import Marketplace from "./Marketplace";
+import DataLoop from "./DataLoop";
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
           </div>
         </div>
         <Marketplace />
+        <DataLoop/>
       </div>
     </Layout>
   );
