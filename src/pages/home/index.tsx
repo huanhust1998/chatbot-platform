@@ -4,11 +4,13 @@ import BookMeeting from "./BookMeeting";
 import { intro } from "../../assets/images";
 import Marketplace from "./Marketplace";
 import DataLoop from "./DataLoop";
+import SeeForYourself from "./SeeForYourself";
+import GenerativeAI from "./GenerativeAI";
 
 const Home = () => {
   return (
     <Layout>
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center gap-10 mb-10">
         <BookMeeting />
         {/* <Partner /> */}
 
@@ -22,7 +24,9 @@ const Home = () => {
           </div>
         </div>
         <Marketplace />
-        <DataLoop/>
+        <DataLoop />
+        <SeeForYourself />
+        <GenerativeAI />
       </div>
     </Layout>
   );

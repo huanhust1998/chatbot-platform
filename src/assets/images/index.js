@@ -9,3 +9,4 @@ export { default as imgElement } from "./img-element.webp";
 export { default as imgHuman } from "./img-human.webp";
 export { default as imgMarketplace } from "./img-marketplace.webp";
 export { default as imgSecurity } from "./img-security.webp";
+export { default as generativeAI } from "./generative-ai.png";
