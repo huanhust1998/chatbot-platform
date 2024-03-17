@@ -1,4 +1,3 @@
-import React from "react";
 import { logo } from "../../assets/images";
 
 const MENU_ITEMS = [
@@ -11,7 +10,7 @@ const MENU_ITEMS = [
 
 const Header = () => {
   return (
-    <div className="fixed top-0 w-full px-60 flex justify-between items-center h-12 pt-10">
+    <div className="sticky top-0 w-full px-60 flex justify-between items-center h-20 z-50 bg-white">
       <div className="flex items-center justify-center gap-1">
         <img src={logo} alt="logo" width={40} />
         <h1 className="text-16 font-bold">Chatbot</h1>
