@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { bookMeeting } from "../../assets/images";
 
 const BookMeeting = () => {
@@ -7,7 +8,7 @@ const BookMeeting = () => {
       <div className="flex-col items-center justify-center absolute top-16">
         <div className="flex flex-col justify-center items-center">
           <h1 className="text-28 text-white">
-            Dataloop’s AI Development Platform
+            Chatbot-platform's AI Development Platform
           </h1>
           <h2 className="text-[80px] text-white">Let the builders build</h2>
           <p className="text-20 text-white">

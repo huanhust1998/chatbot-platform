@@ -10,3 +10,7 @@ export { default as imgHuman } from "./img-human.webp";
 export { default as imgMarketplace } from "./img-marketplace.webp";
 export { default as imgSecurity } from "./img-security.webp";
 export { default as generativeAI } from "./generative-ai.png";
+export { default as pythonSDKDoc } from "./python-sdk-docs.png";
+export { default as backgroundIntegration } from "./background-integrations.webp";
+export { default as integration } from "./integrations.webp";
+export { default as heroImgTable } from "./hero-img-tablet.webp";

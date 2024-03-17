@@ -67,7 +67,7 @@ const DataLoop = () => {
   const [tab, setTab] = useState(DATA_LOOP_LIST[0]);
   return (
     <div className="flex flex-col justify-center items-center">
-      <h2 className="text-[60px] text-grey-1000">Dataloop in a nutshell</h2>
+      <h2 className="text-[60px] text-grey-1000">Chatbot-platform in a nutshell</h2>
       <p className="text-20 text-grey-700">
         The last AI application platform you’ll ever need.
       </p>

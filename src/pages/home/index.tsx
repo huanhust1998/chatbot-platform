@@ -6,11 +6,15 @@ import Marketplace from "./Marketplace";
 import DataLoop from "./DataLoop";
 import SeeForYourself from "./SeeForYourself";
 import GenerativeAI from "./GenerativeAI";
+import PythonSDKDoc from "./PythonSDKDoc";
+import UnstructuredData from "./UnstructuredData";
+import Integrations from "./Integrations";
+import EndHomePage from "./EndHomePage";
 
 const Home = () => {
   return (
     <Layout>
-      <div className="flex flex-col justify-center items-center gap-10 mb-10">
+      <div className="flex flex-col justify-center items-center gap-20 mb-10">
         <BookMeeting />
         {/* <Partner /> */}
 
@@ -27,6 +31,10 @@ const Home = () => {
         <DataLoop />
         <SeeForYourself />
         <GenerativeAI />
+        <PythonSDKDoc />
+        <UnstructuredData />
+        <Integrations />
+        <EndHomePage />
       </div>
     </Layout>
   );
