@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { bgData, iconData, imgData } from "../../assets/images";
+import { bgData, imgData, imgElement, imgHuman, imgMarketplace, imgModel, imgPipe, imgSecurity } from "../../assets/images";
 import {
   ArrowIcon,
   IconElementData,
@@ -17,56 +17,49 @@ const DATA_LOOP_LIST = [
     logo: IconLogoData,
     title: "Data",
     img: imgData,
-    icon: iconData,
     des: "Explore and analyze vast quantities of unstructured data from diverse sources. Rely on automated preprocessing and embeddings to identify similarities and find the data you need. Curate, version, clean, and route your data to wherever it’s needed to create exceptional AI applications.",
   },
   {
     tab: "models",
     logo: IconModelData,
     title: "Models",
-    img: imgData,
-    icon: iconData,
-    des: "Explore and analyze vast quantities of unstructured data from diverse sources. Rely on automated preprocessing and embeddings to identify similarities and find the data you need. Curate, version, clean, and route your data to wherever it’s needed to create exceptional AI applications.",
+    img: imgModel,
+    des: "Use cutting-edge, off the shelf AI models or build your own. Deploy to production without connecting any external tools. Version, experiment, compare and fine-tune your creations, then build on top of them right in the platform using various datasets and additional useful elements.",
   },
   {
     tab: "pipelines",
     logo: IconPipelinesData,
     title: "Pipelines",
-    img: imgData,
-    icon: iconData,
-    des: "Explore and analyze vast quantities of unstructured data from diverse sources. Rely on automated preprocessing and embeddings to identify similarities and find the data you need. Curate, version, clean, and route your data to wherever it’s needed to create exceptional AI applications.",
+    img: imgPipe,
+    des: "Orchestrate data, models, elements and human feedback together to create any workflow you require. Use a familiar drag-and-drop interface or build entirely in code using our Python SDK. Spin up pre-created pipeline templates of popular workflows in minutes to get your application off the ground.",
   },
   {
     tab: "elements",
     logo: IconElementData,
     title: "Elements",
-    img: imgData,
-    icon: iconData,
-    des: "Explore and analyze vast quantities of unstructured data from diverse sources. Rely on automated preprocessing and embeddings to identify similarities and find the data you need. Curate, version, clean, and route your data to wherever it’s needed to create exceptional AI applications.",
+    img: imgElement,
+    des: "Create any functionality you need with an in-platform, dedicated function-as-a-service offering. Write code that works with your data, accesses your models, and performs complex tasks without authentication or any infrastructure setup. Build AI-based applications at a fraction of the time.",
   },
   {
     tab: "human",
     logo: IconHumanData,
     title: "Humans",
-    img: imgData,
-    icon: iconData,
-    des: "Explore and analyze vast quantities of unstructured data from diverse sources. Rely on automated preprocessing and embeddings to identify similarities and find the data you need. Curate, version, clean, and route your data to wherever it’s needed to create exceptional AI applications.",
+    img: imgHuman,
+    des: "Treat humans to the respect they deserve, and streamline work for large data teams working together. Integrate feedback right into the loop to speed up RLHF and human-centric tasks. Get rid of email and screenshots once and for all.",
   },
   {
     tab: "marketplace",
     logo: IconMarketplace,
     title: "Marketplace",
-    img: imgData,
-    icon: iconData,
-    des: "Explore and analyze vast quantities of unstructured data from diverse sources. Rely on automated preprocessing and embeddings to identify similarities and find the data you need. Curate, version, clean, and route your data to wherever it’s needed to create exceptional AI applications.",
+    img: imgMarketplace,
+    des: "Leverage existing models, elements and pipelines to create AI applications in record time. Mix and match components battle-tested by our ecosystem to ensure your workflows have a solid foundation and rely on mature, capable technologies.",
   },
   {
     tab: "security",
     logo: IconSecurity,
     title: "Security",
-    img: imgData,
-    icon: iconData,
-    des: "Explore and analyze vast quantities of unstructured data from diverse sources. Rely on automated preprocessing and embeddings to identify similarities and find the data you need. Curate, version, clean, and route your data to wherever it’s needed to create exceptional AI applications.",
+    img: imgSecurity,
+    des: "Dataloop is compliant with the most strict standards on the planet, including the GDPR, ISO 27001 & ISO 27701 and SOC 2 Type II. In addition, the platform includes security controls such as RBAC, SSO, 2FA, AES-256 encryption and maintains a granular audit trail of every single activity.",
   },
 ];
 
@@ -113,15 +106,17 @@ const DataLoop = () => {
           <img src={tab.img} className="absolute top-16 left-10" />
         </div>
         <div className="flex flex-col gap-10">
-          <div className="flex gap-5">
-            <img src={tab.icon} height={250} width={250} />
+          <div className="flex items-center gap-5">
+            <button className="flex items-center justify-center bg-pink-800 p-5 rounded-xl">{<tab.logo color="#fff" />}</button>
             <p className="text-28 text-grey-1000 font-medium">{tab.title}</p>
           </div>
           <div className="max-w-[400px]">
             <p className="text-gray-700 text-20">{tab.des}</p>
-            <div>
+            <div className="flex gap-2 items-center mt-10 hover:cursor-pointer">
               <p>Learn more</p>
-              <ArrowIcon/>
+              <div className="h-6 w-6">
+                <ArrowIcon />
+              </div>
             </div>
           </div>
         </div>
