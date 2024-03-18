@@ -35,7 +35,7 @@ const Marketplace = () => {
           </div>
         </div>
         <div className="w-[900px]">
-          <video className="rounded-xl">
+          <video className="rounded-xl"  autoPlay muted>
             <source src={marketplace} />
           </video>
         </div>
