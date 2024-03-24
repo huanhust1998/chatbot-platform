@@ -1,15 +1,8 @@
 import { Fragment, useState } from 'react'
-import { Dialog, Menu, Transition } from '@headlessui/react'
+import { Dialog, Transition } from '@headlessui/react'
 import {
-  Bars3Icon,
-  BellIcon,
-  CalendarIcon,
   ChartPieIcon,
   Cog6ToothIcon,
-  DocumentDuplicateIcon,
-  FolderIcon,
-  HomeIcon,
-  UsersIcon,
   XMarkIcon,
   TrashIcon,
   ChatBubbleOvalLeftEllipsisIcon,
@@ -19,9 +12,7 @@ import {
   Square3Stack3DIcon,
   WindowIcon,
   ArrowPathRoundedSquareIcon,
-  UserCircleIcon
 } from '@heroicons/react/24/outline'
-import { ChevronDownIcon, MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 import Navbar from '../components/MNavbar';
 
 const navigation = [
@@ -36,10 +27,10 @@ const navigation = [
   { name: 'Lấy link chia sẻ', href: '#', icon: ShareIcon, current: false },
   { name: 'Xoá trợ lý ảo', href: '#', icon: TrashIcon, current: false },
 ]
-const userNavigation = [
-  { name: 'Your profile', href: '#' },
-  { name: 'Sign out', href: '#' },
-]
+// const userNavigation = [
+//   { name: 'Your profile', href: '#' },
+//   { name: 'Sign out', href: '#' },
+// ]
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
