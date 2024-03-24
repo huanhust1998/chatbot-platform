@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { logo } from "../../assets/images";
 
 const MENU_ITEMS = [
@@ -23,11 +24,16 @@ const Header = () => {
         ))}
       </div>
       <div className="flex justify-center items-center gap-5">
-        <span className="text-16 text-grey-1000 font-semibold">
-          Sign in
-        </span>
-        <button className="flex items-center justify-center px-6 py-3 bg-pink-700 rounded-xl hover:bg-grey-1000 group duration-200" type="button">
-          <span className="text-16 text-grey-1000 font-semibold group-hover:text-white">BOOK A MEETING</span>
+        <Link className="text-16 text-grey-1000 font-semibold" to="/">
+          Log in
+        </Link>
+        <button
+          className="flex items-center justify-center px-6 py-3 bg-pink-700 rounded-xl hover:bg-grey-1000 group duration-200"
+          type="button"
+        >
+          <span className="text-16 text-grey-1000 font-semibold group-hover:text-white">
+            BOOK A MEETING
+          </span>
         </button>
       </div>
     </div>
