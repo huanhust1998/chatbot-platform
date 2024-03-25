@@ -1,0 +1,44 @@
+.input-wrapper {
+    display: flex;
+  }
+  
+  .input-wrapper input {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .input-wrapper .send-button {
+    width: 40px;
+    height: 40px;
+  }
+  .chat {
+    border-radius: 10px;
+    /* Các thuộc tính CSS khác cho phần tử chat */
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+  }
+  
+  .message-input {
+    border-radius: 10px;
+    /* Các thuộc tính CSS khác cho phần tử message-input */
+  }
+  
+  .input-container {
+    border-radius: 10px;
+    /* Các thuộc tính CSS khác cho phần tử input-container */
+  }
+  
+  .send-button {
+    border-radius: 50%;
+    /* Các thuộc tính CSS khác cho nút gửi */
+  }
+  
+  .message-list {
+    flex: 1;
+    overflow-y: scroll;
+  }
+  
+  .message-input {
+    margin-top: auto;
+  }
