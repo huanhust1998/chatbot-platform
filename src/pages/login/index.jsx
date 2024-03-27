@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { logo } from "../../assets/images";
 
+import axios from 'axios';
+
+import { useNavigate } from 'react-router-dom';
+
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -13,9 +17,35 @@ const Login = () => {
     setPassword(e.target.value);
   };
 
+  const navigateTo = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // Xử lý đăng nhập tại đây
+
+        
+    // Xử lý đăng nhập tại đây
+
+    console.log(email)
+
+    axios.post('http://localhost:3000/auth/login', {
+      email: email,
+      password: password
+    }, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Custom-Header': 'value'
+      }
+    })
+    .then((response) => {
+      // Xử lý response từ server
+      console.log(response.data);
+      navigateTo('/home');
+    })
+    .catch((error) => {
+      // Xử lý lỗi
+      console.error(error);
+    });
   };
 
   return (
