@@ -1,44 +1,64 @@
-.input-wrapper {
-    display: flex;
-  }
-  
-  .input-wrapper input {
-    flex: 1;
-    margin-right: 10px;
-  }
-  
-  .input-wrapper .send-button {
-    width: 40px;
-    height: 40px;
-  }
-  .chat {
-    border-radius: 10px;
-    /* Các thuộc tính CSS khác cho phần tử chat */
-    display: flex;
-    flex-direction: column;
-    height: 600px;
-  }
-  
-  .message-input {
-    border-radius: 10px;
-    /* Các thuộc tính CSS khác cho phần tử message-input */
-  }
-  
-  .input-container {
-    border-radius: 10px;
-    /* Các thuộc tính CSS khác cho phần tử input-container */
-  }
-  
-  .send-button {
-    border-radius: 50%;
-    /* Các thuộc tính CSS khác cho nút gửi */
-  }
-  
-  .message-list {
-    flex: 1;
-    overflow-y: scroll;
-  }
-  
-  .message-input {
-    margin-top: auto;
-  }
+/* ChatComponent.css */
+.chat-input-container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.chat-input {
+  display: flex;
+  align-items: end;
+  width: 500%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.chat-input input[type="text"] {
+  flex: 1;
+  height: 30px;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.chat-input input[type="file"] {
+  display: none;
+}
+
+/* ChatComponent.css */
+.chat-container {
+  /* Existing styles */
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #f5f5f5;
+}
+
+.chat-header-icon {
+  margin-right: 10px;
+}
+
+.chat-header-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header-text h2 {
+  margin: 0;
+}
+
+.chat-header-text p {
+  margin: 0;
+  color: #888;
+}
+
+.chat-input button {
+  margin-left: 10px; /* Add margin-left here */
+}

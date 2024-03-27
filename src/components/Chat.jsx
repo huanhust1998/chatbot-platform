@@ -1,77 +1,77 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
-// import { faIcon } from '@fortawesome/free-solid-svg-icons';
+import { useState, useRef, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPaperPlane, faFileUpload } from "@fortawesome/free-solid-svg-icons";
 
-import '../css/Chat.css';
+import { IconBase } from "react-icons";
 
-// class Header extends React.Component {
-//     render() {
-//       return (
-//         <div className="header">
-//           <FontAwesomeIcon icon={faIcon} />
-//           <h1>Title</h1>
-//           <p>Subtitle</p>
-//         </div>
-//       );
-//     }
-// }
+import "../css/Chat.css"; // Import CSS file
 
-class Chat extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      messages: [],
-      newMessage: ''
-    };
-  }
+const ChatComponent = () => {
+  const [messages, setMessages] = useState([]);
+  const [inputValue, setInputValue] = useState("");
+  const [file, setFile] = useState(null);
+  const chatRef = useRef(null);
 
-  handleChange = (event) => {
-    this.setState({ newMessage: event.target.value });
-  }
+  useEffect(() => {
+    chatRef.current.scrollTop = chatRef.current.scrollHeight;
+  }, [messages]);
 
-  handleSubmit = (event) => {
-    event.preventDefault();
-    const { messages, newMessage } = this.state;
-    if (newMessage !== '') {
-      this.setState({
-        messages: [...messages, newMessage],
-        newMessage: ''
-      });
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
+  };
+
+  const handleFileChange = (event) => {
+    setFile(event.target.files[0]);
+  };
+
+  const handleSendMessage = () => {
+    if (inputValue.trim() !== "") {
+      setMessages([...messages, inputValue]);
+      setInputValue("");
     }
-  }
+  };
 
-  render() {
-    const { messages, newMessage } = this.state;
+  const handleUploadFile = () => {
+    console.log(file);
+  };
 
-    return (
-      <div className="chat" >
-
-        {/* <Header /> */}
-
-        <div className="message-list">
-          {messages.map((message, index) => (
-            <div key={index} className="message">{message}</div>
-          ))}
+  return (
+    <div className="chat-container">
+      <header className="chat-header">
+        <div className="chat-header-icon">
+          <IconBase />
         </div>
-        <div className="message-input"></div>
-        <form onSubmit={this.handleSubmit} className="input-container">
-          <div className="input-wrapper">
-            <input
-              type="text"
-              value={newMessage}
-              onChange={this.handleChange}
-              placeholder="Nhập tin nhắn..."
-            />
-            <button type="submit" className="send-button">
-              <FontAwesomeIcon icon={faPaperPlane} />
-            </button>
-          </div>
-        </form>
-        
+        <div className="chat-header-text">
+          <h2>MinhMX</h2>
+          <p>Đẹp trai quá</p>
+        </div>
+      </header>
+      <div className="chat-messages" ref={chatRef}>
+        {messages.map((message, index) => (
+          <div key={index}>{message}</div>
+        ))}
       </div>
-    );
-  }
-}
+      <div className="chat-input-container">
+        <div className="chat-input">
+          <input
+            type="text"
+            value={inputValue}
+            onChange={handleInputChange}
+            placeholder="Enter your message..."
+          />
+          <input type="file" onChange={handleFileChange} />
 
-export default Chat;
+          <button onClick={handleUploadFile}>
+            <FontAwesomeIcon icon={faFileUpload} />
+          </button>
+
+          <button onClick={handleSendMessage}>
+            <FontAwesomeIcon icon={faPaperPlane} />
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ChatComponent;

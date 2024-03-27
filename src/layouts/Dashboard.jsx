@@ -15,6 +15,7 @@ import {
 } from '@heroicons/react/24/outline'
 import Navbar from '../components/MNavbar';
 import Chat from '../components/Chat';
+import AssistantInfoComponent from '../components/AssistantInfoComponent';
 
 import './Dashboard.css';
 
@@ -183,51 +184,14 @@ export default function Example() {
           {/* Cho de place content vaof layout */}
           <main className="py-10">
             
-            <div className="px-4 sm:px-6 lg:px-8">
-              <form className="Division">
-                <p>Thông tin</p>
-
-                <div className="input-box">
-                    <label htmlFor="fname">Tên trợ lý ảo ?</label>
-                    <input type="text" id="fname" value="minhmx"/>
-                </div>
-
-                <div className="input-box">
-                    <label htmlFor="fApiKey">API key OpenAi</label>
-                    <input type="password" required id="fApiKey" value="minhmx"/>
-                    <i className="uil uil-eye-sslash toggle"></i> 
-                </div>
-                
-                <div className="input-box">
-                    <label htmlFor="fsource">Nguon chinh ?</label>
-                    <select name="Source" id="soruces">
-                        <option value="openai">Open Ai</option>
-                        <option value="copilot">Github Copilot</option>
-                    </select>
-                </div>
-            
-                <div className="input-box">
-                    <label htmlFor="fmodel">Ten model OpenAI ?</label>
-                    <select name="Model" id="models">
-                        <option value="gpt4">Gpt4</option>
-                        <option value="gpt3.5">Gpt3.5</option>
-                    </select>
-                </div>
-            
-                <div className="input-box">
-                    <label htmlFor="f_notification_expried">Thông báo khi người dùng hết hạn ?</label>
-                    <input type="text" value="Hết hạn mức sử dụng, vui lòng liên hệ quản trị viên." /> 
-                </div>
-            
-                <div className="input-box">
-                    <label htmlFor="f_notification_email">Thông báo yêu cầu email ?</label>
-                    <input type="text" value="dev.minhmx@gmail.com" /> 
-                </div>
-            </form>
-
+          <div style={{ display: "flex" }}>
+            <div style={{ flex: 1, padding: "20px" }}>
+              <AssistantInfoComponent />
             </div>
-
-            <Chat />
+            <div style={{ flex: 1, padding: "20px" }}>
+              <Chat />
+            </div>
+          </div>
           </main>
         </div>
       </div>
