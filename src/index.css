@@ -34,13 +34,13 @@
 
 @layer base {
   body {
-    @apply overflow-hidden font-sf-pro-display text-gray-dark-charcoal;
+    @apply overflow-hidden font-sf-pro-display text-grey-1000;
   }
 
   p,
   span,
   ul {
-    @apply text-14 text-gray-90 xl:text-16;
+    @apply text-14 xl:text-16;
   }
 
   .effect-scale {
