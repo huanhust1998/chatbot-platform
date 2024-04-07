@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
       <div className="w-screen h-screen px-10 overflow-y-auto relative">
         <Header />
         {children}
-        <Footer />
+        {location.pathname !== PATH_NAME.CHAT_BOT && <Footer />}
       </div>
       {location.pathname !== PATH_NAME.CHAT_BOT && (
         <Link

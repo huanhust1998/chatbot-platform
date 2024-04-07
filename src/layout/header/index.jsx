@@ -17,10 +17,10 @@ const Header = () => {
         <img src={logo} alt="logo" width={20} className="rounded"/>
         <h1 className="text-16 font-bold">Chatbot</h1>
       </Link>
-      <div className="flex gap-5">
+      <div className="flex gap-9">
         {MENU_ITEMS.map((item, key) => (
           <div key={key}>
-            <span className="text-16 text-grey-1000 font-medium">{item}</span>
+            <span className="text-20 text-grey-1000 font-medium">{item}</span>
           </div>
         ))}
       </div>

@@ -1,51 +1,36 @@
 import { useState } from "react";
 import { logo } from "../../assets/images";
 
-import axios from 'axios';
-
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
-
   const navigateTo = useNavigate();
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Xử lý đăng nhập tại đây
+    if(email ==="chatbot@gmail.com"&& password ==="chatbot123@")navigateTo("home")
 
-        
-    // Xử lý đăng nhập tại đây
-
-    console.log(email)
-
-    axios.post('http://localhost:3000/auth/login', {
-      email: email,
-      password: password
-    }, {
-      headers: {
-        'Content-Type': 'application/json',
-        'Custom-Header': 'value'
-      }
-    })
-    .then((response) => {
-      // Xử lý response từ server
-      console.log(response.data);
-      navigateTo('/home');
-    })
-    .catch((error) => {
-      // Xử lý lỗi
-      console.error(error);
-    });
+    // axios.post('http://localhost:3000/auth/login', {
+    //   email: email,
+    //   password: password
+    // }, {
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //     'Custom-Header': 'value'
+    //   }
+    // })
+    // .then((response) => {
+    //   // Xử lý response từ server
+    //   console.log(response.data);
+    //   navigateTo('/home');
+    // })
+    // .catch((error) => {
+    //   // Xử lý lỗi
+    //   console.error(error);
+    // });
   };
 
   return (
@@ -71,7 +56,7 @@ const Login = () => {
             type="email"
             placeholder="Email"
             value={email}
-            onChange={handleEmailChange}
+            onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <div className="mb-6 w-full">
@@ -87,12 +72,12 @@ const Login = () => {
             type="password"
             placeholder="Password"
             value={password}
-            onChange={handlePasswordChange}
+            onChange={(e) => setPassword(e.target.value)}
           />
         </div>
         <div className="flex items-center justify-between w-full">
           <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-2xl focus:outline-none focus:shadow-outline w-full"
+            className="bg-blue-700 text-white font-bold py-2 px-4 rounded-2xl focus:outline-none focus:shadow-outline w-full"
             type="submit"
           >
             Sign In
