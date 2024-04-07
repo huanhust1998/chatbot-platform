@@ -40,7 +40,7 @@ export const Chatbot = () => {
               key={item.key}
               className={`${
                 itemChatbot === item.key ? "bg-grey-200" : "bg-white"
-              } w-full py-3 pl-3 hover:bg-grey-200`}
+              } w-full py-3 pl-3 hover:bg-grey-200 rounded-lg`}
               onClick={() => setItemChatbot(item.key)}
               type="button"
             >

@@ -22,19 +22,12 @@ const PARTNER_LIST = [
 ];
 const Partner = () => {
   return (
-    <div className="flex gap-10 w-screen px-20">
+    <section className="flex w-screen animation">
       {PARTNER_LIST.map((item, index) => (
-        <div
-          key={index}
-          style={{
-            backgroundImage: `url(${item})`,
-          }}
-          className="bg-cover bg-none h-16 w-40"
-        ></div>
+        <img src={item} key={index} alt={index} className="w-[300px] h-14"/>
       ))}
-    </div>
+    </section>
   );
 };
 
 export default Partner;
-

@@ -1,0 +1,44 @@
+.animation {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: all 0.5s ease-out;
+  transition-delay: 0.1s;
+}
+
+.scroll-animation {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+// $n: 10;
+// .gallery {
+//   --d: 10s;
+//   /* duration */
+//   //display: grid;
+//   // grid-template-columns: repeat(10, 1200px); /* number of visible images + width */
+//   overflow: hidden;
+//   //-webkit-mask: linear-gradient(90deg, #0000, #000 5% 95%, #0000);
+// }
+// .gallery>img {
+//   grid-area: 1/1;
+//   width: 100%;
+//   aspect-ratio: 1.5;
+//   object-fit: cover;
+//   animation: r var(--d) linear infinite;
+// }
+
+// @for $i from 2 to ($n + 1) {
+//   .gallery>img:nth-child(#{$i}) {
+//     animation-delay: calc(#{(1 - $i)/$n}*var(--d))
+//   }
+// }
+
+// @keyframes r {
+//   #{100/$n}% {
+//     transform: translate(-100%)
+//   }
+
+//   #{100/$n + .01}% {
+//     transform: translate(($n - 1)*100%)
+//   }
+// }

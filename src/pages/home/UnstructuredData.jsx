@@ -26,8 +26,8 @@ const UNSTRUCTURED_DATA_LIST = [
 
 const UnstructuredData = () => {
   return (
-    <div className="flex justify-center items-center flex-col gap-10">
-      <div className="w-[600px] flex items-start justify-center">
+    <section className="flex justify-center items-center flex-col gap-10">
+      <div className="w-[600px] flex items-start justify-center animation">
         <h2 className="text-[60px] text-grey-1000 font-semibold text-center leading-[80px]">
           Yes, we support your unstructured data
         </h2>
@@ -48,7 +48,7 @@ const UnstructuredData = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

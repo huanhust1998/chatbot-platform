@@ -2,7 +2,7 @@ import { seeYourself } from "../../assets/videos";
 
 const SeeForYourself = () => {
   return (
-    <section className="flex items-center justify-center flex-col mt-10 animation">
+    <section className="flex items-center justify-center flex-col mt-10">
       <h2 className="text-[60px] text-grey-1000 animation">See for yourself</h2>
       <p className="text-20 text-grey-700 animation">
         Build as fast as you can dream (which translates to about 20x faster)

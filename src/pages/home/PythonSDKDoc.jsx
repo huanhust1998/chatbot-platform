@@ -3,9 +3,9 @@ import { ArrowIcon } from "../../components/icons";
 
 const PythonSDKDoc = () => {
   return (
-    <div className="mt-20 relative">
+    <section className="mt-20 relative">
       <img src={pythonSDKDoc} />
-      <div className="absolute top-24 left-20 flex gap-20">
+      <div className="absolute top-24 left-20 flex gap-20 animation">
         <div className="bg-[#2f293d] px-8 py-10 rounded-xl h-[200px]">
           <div className="elementor-widget-container">
             <pre className="text-white">
@@ -84,7 +84,7 @@ const PythonSDKDoc = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

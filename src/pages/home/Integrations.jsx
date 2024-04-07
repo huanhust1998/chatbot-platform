@@ -3,14 +3,14 @@ import { ArrowIcon } from "../../components/icons";
 
 const Integrations = () => {
   return (
-    <div
+    <section
       style={{
         backgroundImage: `url(${backgroundIntegration})`,
       }}
       className="bg-cover bg-no-repeat h-[800px] w-4/5 flex flex-col items-center justify-center gap-10"
     >
-      <h2 className="text-44 text-white font-semibold">Integrations</h2>
-      <img src={integration} />
+      <h2 className="text-44 text-white font-semibold animation">Integrations</h2>
+      <img src={integration} className="animation"/>
       <div className="flex gap-2 items-center mt-10 hover:cursor-pointer">
         <p className="text-grey-1000 text-20 font-semibold">
           More integrations
@@ -19,7 +19,7 @@ const Integrations = () => {
           <ArrowIcon color={"#000"} />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default Integrations;

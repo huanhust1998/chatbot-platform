@@ -71,7 +71,7 @@ const DataLoop = () => {
       <p className="text-20 text-grey-700 animation">
         The last AI application platform you’ll ever need.
       </p>
-      <div className="flex gap-3 my-10 animation">
+      <div className="flex gap-3 my-10">
         {DATA_LOOP_LIST.map((item, key) => (
           <div
             key={key}
@@ -96,7 +96,7 @@ const DataLoop = () => {
         ))}
       </div>
 
-      <div className="w-full h-full flex gap-40 animation">
+      <div className="w-full h-full flex gap-40">
         <div
           style={{
             backgroundImage: `url(${bgData})`,
