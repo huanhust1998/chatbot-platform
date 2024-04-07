@@ -10,9 +10,9 @@ const MARKETPLACE_LIST = [
 
 const Marketplace = () => {
   return (
-    <div className="flex justify-center items-center mt-20 flex-col">
-      <h2 className="text-[60px]">Simply robust AI development</h2>
-      <p className="text-20 text-grey-700">
+    <section className="flex justify-center items-center mt-20 flex-col">
+      <h2 className="text-[60px] animation">Simply robust AI development</h2>
+      <p className="text-20 text-grey-700 animation">
         Dataloop makes every single data person in your organization feel at
         home.
       </p>
@@ -46,7 +46,7 @@ const Marketplace = () => {
           <ArrowIcon />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default Marketplace;

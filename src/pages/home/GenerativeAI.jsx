@@ -3,10 +3,10 @@ import { ArrowIcon } from "../../components/icons";
 
 const GenerativeAI = () => {
   return (
-    <div className="flex gap-20 px-60">
+    <section className="flex gap-20 px-60">
       <div className="w-1/3">
-        <h2 className="text-[60px] text-grey-1000">Generative AI</h2>
-        <p className="text-20 text-grey-700">
+        <h2 className="text-[60px] text-grey-1000 animation">Generative AI</h2>
+        <p className="text-20 text-grey-700 animation">
           Build multimodal pipelines for extraordinary AI application
           development. Utilize both off-the-shelf and fine-tuned Large Language
           Models (LLMs), incorporate Retrieval-Augmented Generation (RAG)
@@ -23,7 +23,7 @@ const GenerativeAI = () => {
       <div>
         <img src={generativeAI}/>
       </div>
-    </div>
+    </section>
   );
 };
 

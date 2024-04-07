@@ -2,6 +2,7 @@ import { useState } from "react";
 import Layout from "../../layout";
 import { chatbot } from "../../assets/images";
 import { postChatbot } from "../../services/chat.service";
+import { uid } from 'uid';
 
 const LIST_ITEM_CHATBOT = [
   { title: "All chats", key: "all_chats" },
@@ -13,9 +14,21 @@ const LIST_ITEM_CHATBOT = [
 
 export const Chatbot = () => {
   const [itemChatbot, setItemChatbot] = useState(LIST_ITEM_CHATBOT[0].key);
+  const [chatInput, setChatInput] = useState("")
 
   const handleSubmitChatbot = async () => {
-    const response = await postChatbot({});
+    if(!chatInput)return;
+    const data = {
+      conv_uid: uid(),
+      user_input: chatInput,
+      user_name: "Huan",
+      chat_mode: "",
+      select_param: "string",
+      model_name: "string",
+      incremental: false,
+    };
+    
+    const response = await postChatbot(data);
     console.log({ response });
   };
   return (
@@ -40,6 +53,7 @@ export const Chatbot = () => {
             <input
               placeholder="Type your message here..."
               className="w-3/5 h-12 rounded-3xl border p-4"
+              onChange={(e) => setChatInput(e.target.value)}
             />
             <button
               className="bg-blue-800 py-2 px-7 h-12 rounded-3xl text-white font-bold"

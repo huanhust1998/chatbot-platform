@@ -66,12 +66,12 @@ const DATA_LOOP_LIST = [
 const DataLoop = () => {
   const [tab, setTab] = useState(DATA_LOOP_LIST[0]);
   return (
-    <div className="flex flex-col justify-center items-center">
-      <h2 className="text-[60px] text-grey-1000">Chatbot-platform in a nutshell</h2>
-      <p className="text-20 text-grey-700">
+    <section className="flex flex-col justify-center items-center">
+      <h2 className="text-[60px] text-grey-1000 animation">Chatbot-platform in a nutshell</h2>
+      <p className="text-20 text-grey-700 animation">
         The last AI application platform you’ll ever need.
       </p>
-      <div className="flex gap-3 my-10">
+      <div className="flex gap-3 my-10 animation">
         {DATA_LOOP_LIST.map((item, key) => (
           <div
             key={key}
@@ -96,7 +96,7 @@ const DataLoop = () => {
         ))}
       </div>
 
-      <div className="w-full h-full flex gap-40">
+      <div className="w-full h-full flex gap-40 animation">
         <div
           style={{
             backgroundImage: `url(${bgData})`,
@@ -121,7 +121,7 @@ const DataLoop = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
