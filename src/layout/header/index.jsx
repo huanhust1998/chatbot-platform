@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { logo } from "../../assets/images";
+import { PATH_NAME } from "../../routes";
 
 const MENU_ITEMS = [
   "Platform",
@@ -12,10 +13,10 @@ const MENU_ITEMS = [
 const Header = () => {
   return (
     <div className="sticky top-0 w-full px-60 flex justify-between items-center h-20 z-50 bg-white">
-      <div className="flex items-center justify-center gap-1">
-        <img src={logo} alt="logo" width={40} />
+      <Link className="flex items-center justify-center gap-1" to={PATH_NAME.HOME}>
+        <img src={logo} alt="logo" width={20} className="rounded"/>
         <h1 className="text-16 font-bold">Chatbot</h1>
-      </div>
+      </Link>
       <div className="flex gap-5">
         {MENU_ITEMS.map((item, key) => (
           <div key={key}>

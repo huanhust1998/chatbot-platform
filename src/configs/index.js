@@ -1,0 +1,1 @@
+export const BASE_URL_CHAT_BOT = import.meta.env.BASE_URL_CHAT_BOT
